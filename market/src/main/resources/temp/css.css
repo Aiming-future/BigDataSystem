@@ -1,0 +1,1827 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+
+
+
+	margin: 0;
+
+
+
+	padding: 0;
+
+
+
+	border: 0;
+
+
+
+	outline: 0;
+
+
+
+	font-size: 100%;
+
+
+
+	vertical-align: baseline;
+
+
+
+	background: transparent;
+
+
+
+}
+
+
+
+ol, ul {
+
+
+
+	list-style: none;
+
+
+
+}
+
+
+
+blockquote, q {
+
+
+
+	quotes: none;
+
+
+
+}
+
+
+
+blockquote:before, blockquote:after, q:before, q:after {
+
+
+
+	content: '';
+
+
+
+	content: none;
+
+
+
+}
+
+
+
+:focus {
+
+
+
+	outline: 0;
+
+
+
+}
+
+
+
+ins {
+
+
+
+	text-decoration: none;
+
+
+
+}
+
+
+
+del {
+
+
+
+	text-decoration: line-through;
+
+
+
+}
+
+
+
+.clearfix:after {
+
+
+
+	clear: both;
+
+
+
+	content: '.';
+
+
+
+	display: block;
+
+
+
+	visibility: hidden;
+
+
+
+	height: 0;
+
+
+
+}
+
+
+
+.clearfix {
+
+
+
+	display: inline-block;
+
+
+
+}
+
+
+
+* html .clearfix {
+
+
+
+	height: 1%;
+
+
+
+}
+
+
+
+.clearfix {
+
+
+
+	display: block;
+
+
+
+}
+
+
+
+.clear {
+
+
+
+	clear: both;
+
+
+
+	line-height: 0;
+
+
+
+	font-size: 0;
+
+
+
+}
+
+
+
+/* Main CSS Start */
+
+
+
+body {
+
+
+
+
+
+
+
+	font-size: 12px;
+
+
+
+	font-family: Arial, Helvetica, sans-serif;
+
+
+
+	color: #442f28;
+
+
+
+	padding: 70px 0;
+
+
+
+}
+
+
+
+#wrap-a {
+
+
+
+	width: 952px;
+
+
+
+	margin: 0 auto;
+
+
+
+	background: url(wrap-a.gif) repeat-y;
+
+
+
+}
+
+
+
+#wrap-b {
+
+
+
+	width: 952px;
+
+
+
+	background: url(wrap-b.gif) no-repeat left top;
+
+
+
+}
+
+
+
+#wrap-c {
+
+
+
+	width: 952px;
+
+
+
+	background: url(wrap-c.gif) no-repeat left bottom;
+
+
+
+}
+
+
+
+h1 {
+
+
+
+	font-size: 30px;
+
+
+
+	padding: 0 0 15px;
+
+
+
+}
+
+
+
+h2 {
+
+
+
+	font-size: 27px;
+
+
+
+	padding: 0 0 15px;
+
+
+
+}
+
+
+
+h3 {
+
+
+
+	font-size: 24px;
+
+
+
+	padding: 0 0 15px;
+
+
+
+}
+
+
+
+h4 {
+
+
+
+	font-size: 20px;
+
+
+
+	padding: 0 0 15px;
+
+
+
+}
+
+
+
+h5 {
+
+
+
+	font-size: 17px;
+
+
+
+	padding: 0 0 15px;
+
+
+
+}
+
+
+
+h6 {
+
+
+
+	font-size: 14px;
+
+
+
+	padding: 0 0 4px;
+
+
+
+}
+
+
+
+/* Main CSS End */
+
+
+
+
+
+
+
+
+
+
+
+/* Menu CSS Start */
+
+
+
+#menu {
+
+
+
+	padding: 155px 0 0;
+
+
+
+	position: relative;
+
+
+
+	left: -4px;
+
+
+
+}
+
+
+
+#menu ul li {
+
+
+
+	padding: 0 0 3px;
+
+
+
+}
+
+
+
+#menu ul li.parrent {
+
+
+
+	padding: 0 0 0;
+
+
+
+}
+
+
+
+#menu ul li a {
+
+
+
+	height: 39px;
+
+
+
+	width: 230px;
+
+
+
+	display: block;
+
+
+
+	background: url(menu-bg.png) no-repeat bottom;
+
+
+
+	text-decoration: none;
+
+
+
+	font-size: 20px;
+
+
+
+	color: #664d45;
+
+
+
+	padding: 9px 0 0 25px;
+
+
+
+	z-index: 2;
+
+
+
+	position: relative;
+
+
+
+}
+
+
+
+#menu ul li a:hover, #menu ul li.current_page_item a, #menu ul li.current_page_parent a {
+
+
+
+	background-position: top;
+
+
+
+	color: #fff;
+
+
+
+}
+
+
+
+#menu ul li.current_page_item ul, #menu ul li.current_page_parent ul {
+
+
+
+display: inherit;
+
+
+
+}
+
+
+
+#menu ul li ul {
+
+
+
+	background: url(child-menu-bg.gif) repeat-x top;
+
+
+
+	width: 170px;
+
+
+
+	position: relative;
+
+
+
+	left: 16px;
+
+
+
+	z-index: 1;
+
+
+
+	top: -10px;
+
+
+
+	padding: 2px 0 0;
+
+
+
+	display:none;
+
+
+
+}
+
+
+
+#menu ul li ul li {
+
+
+
+	padding: 0;
+
+
+
+	border-bottom: #c4bbb8 1px solid;
+
+
+
+}
+
+
+
+#menu ul li ul li a {
+
+
+
+	height: inherit;
+
+
+
+	width: inherit;
+
+
+
+	display: block;
+
+
+
+	background: none;
+
+
+
+	text-decoration: none;
+
+
+
+	font-size: 14px;
+
+
+
+	color: #664d45 !important;
+
+
+
+	padding: 8px 10px 7px;
+
+
+
+}
+
+
+
+#menu ul li ul li a:hover, #menu ul li ul li.current_page_item a {
+
+
+
+	background: #664d45;
+
+
+
+	color: #fff !important;
+
+
+
+}
+
+
+
+/* Menu CSS End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Content CSS Start */
+
+
+
+#content {
+
+
+
+	padding: 11px 12px 0 0;
+
+
+
+}
+
+
+
+.logo {
+
+
+
+	width: 240px;
+
+
+
+	height: 171px;
+
+
+
+	position: absolute;
+
+
+
+	left: -38px;
+
+
+
+	top: -35px;
+
+
+
+	z-index: 100;
+
+
+
+}
+
+
+
+#col-1 {
+
+
+
+	width: 195px;
+
+
+
+	float: left;
+
+
+
+	position: relative;
+
+
+
+}
+
+
+
+#col-2 {
+
+
+
+	width: 700px;
+
+
+
+	float: right;
+
+
+
+	padding: 18px 9px;
+
+
+
+}
+
+
+
+#col-2 .inner {
+
+
+
+	padding: 18px 9px;
+
+
+
+}
+
+
+
+#col-2 p {
+
+
+
+	margin-bottom:20px;
+
+
+
+}
+
+
+
+#col-2 cite.alignright {
+
+
+
+	float:right;
+
+
+
+	display:block;
+
+
+
+	width:160px;
+
+
+
+	font-size:18px;
+
+
+
+	font-style:normal;
+
+
+
+	color:#ddd9b7;
+
+
+
+	margin:20px 0 15px 20px;
+
+
+
+	padding:20px;
+
+
+
+	line-height:25px;
+
+
+
+	text-align:left;
+
+
+
+	background: #442f28;
+
+
+
+}
+
+
+
+#col-2 cite.alignleft {
+
+
+
+	float:left;
+
+
+
+	display:block;
+
+
+
+	width:220px;
+
+
+
+	font-size:18px;
+
+
+
+	font-style:normal;
+
+
+
+	color:#ddd9b7;
+
+
+
+	margin:10px 30px 20px 0;
+
+
+
+	padding:20px;
+
+
+
+	line-height:25px;
+
+
+
+	text-align:left;
+
+
+
+	background: #442f28;
+
+
+
+}
+
+
+
+.alignright {
+
+
+
+	float:right;
+
+
+
+	margin:20px 0 15px 20px;
+
+
+
+}
+
+
+
+.alignleft {
+
+
+
+	float:left;
+
+
+
+	margin:10px 30px 20px 0;
+
+
+
+}
+
+
+
+#col-2 ul {
+
+
+
+	margin-left:20px;
+
+
+
+	margin-bottom: 20px;
+
+
+
+	list-style:disc;
+
+
+
+}
+
+
+
+#col-2 ol {
+
+
+
+	margin-left: 25px;
+
+
+
+	margin-bottom: 20px;
+
+
+
+	list-style:decimal;
+
+
+
+}
+
+
+
+#col-2 li {
+
+
+
+	margin-bottom:5px;
+
+
+
+}
+
+
+
+#col-2 a {
+
+
+
+	color: #3c95d2;
+
+
+
+}
+
+
+
+#col-2 a:hover {
+
+
+
+	text-decoration: none;
+
+
+
+}
+
+
+
+#slideshow {
+
+
+
+	width: 718px;
+
+
+
+	height: 473px;
+
+
+
+	float: right;
+
+
+
+	background: url(slide-frame.jpg) no-repeat;
+
+
+
+	margin: 0 11px 0 0;
+
+
+
+	position: relative;
+
+
+
+}
+
+
+
+#slider {
+
+
+
+	padding: 58px 0 0 40px;
+
+
+
+}
+
+
+
+#slideshow .time {
+
+
+
+	position:absolute;
+
+
+
+	top: 48px;
+
+
+
+	left: 491px;
+
+
+
+	z-index: 100;
+
+
+
+}
+
+
+
+.boxes {
+
+
+
+	width: 900px;
+
+
+
+	height: 244px;
+
+
+
+	background: url(boxes-bg.gif) no-repeat;
+
+
+
+	margin: 0 0 26px 20px;
+
+
+
+	padding: 0 0 0 14px
+
+
+
+}
+
+
+
+.boxes p {
+
+
+
+	width: 133px;
+
+
+
+	height: 34px;
+
+
+
+}
+
+
+
+.box {
+
+
+
+	width: 255px;
+
+
+
+	height: 168px;
+
+
+
+	float: left;
+
+
+
+	margin: 48px 15px 0;
+
+
+
+	padding: 0 0 0 10px;
+
+
+
+	position: relative;
+
+
+
+}
+
+
+
+.box-1-thumb {
+
+
+
+	width: 107px;
+
+
+
+	height: 109px;
+
+
+
+	background: url(box-1-thumb.png) no-repeat;
+
+
+
+	position: absolute;
+
+
+
+	right: 0;
+
+
+
+	top: 40px;
+
+
+
+	padding: 10px 0 0 13px;
+
+
+
+}
+
+
+
+.box-2-thumb {
+
+
+
+	width: 98px;
+
+
+
+	height: 109px;
+
+
+
+	background: url(box-2-thumb.png) no-repeat;
+
+
+
+	position: absolute;
+
+
+
+	right: 0;
+
+
+
+	top: 40px;
+
+
+
+	padding: 10px 0 0 27px;
+
+
+
+}
+
+
+
+.box-3-thumb {
+
+
+
+	width: 113px;
+
+
+
+	height: 112px;
+
+
+
+	background: url(box-3-thumb.png) no-repeat;
+
+
+
+	position: absolute;
+
+
+
+	right: 0;
+
+
+
+	top: 34px;
+
+
+
+	padding: 16px 0 0 17px;
+
+
+
+}
+
+
+
+/* Content CSS End */
+
+
+
+
+
+
+
+
+
+
+
+/* Banner CSS Start */
+
+
+
+.inner-banner {
+
+
+
+	width: 669px;
+
+
+
+	height: 140px;
+
+
+
+	background: url(inner-banner-frame.gif) no-repeat;
+
+
+
+	position: relative;
+
+
+
+	padding: 19px 0 0 18px;
+
+
+
+}
+
+
+
+.inner-banner .time {
+
+
+
+	position:absolute;
+
+
+
+	top: 10px;
+
+
+
+	left: 469px;
+
+
+
+	z-index: 100;
+
+
+
+}
+
+
+
+/* Banner CSS Start */
+
+
+
+
+
+
+
+
+
+
+
+/* Footer CSS Start */
+
+
+
+#footer {
+
+
+
+	height: 50px;
+
+
+
+	padding: 0 35px 23px 33px;
+
+
+
+	font-size: 10px;
+
+
+
+	color: #442f28;
+
+
+
+}
+
+
+
+#footer a {
+
+
+
+	color: #3c95d2;
+
+
+
+}
+
+
+
+.social-icon {
+
+
+
+	width: 244px;
+
+
+
+	float: left;
+
+
+
+}
+
+
+
+.social-icon a {
+
+
+
+	margin: 0 5px 0 0;
+
+
+
+}
+
+
+
+.copyright {
+
+
+
+	width: 430px;
+
+
+
+	float: left;
+
+
+
+text-align: center;
+
+
+
+line-height: 17px;
+
+
+
+}
+
+
+
+.bi {
+
+
+
+	height: 50px;
+
+
+
+	background: url(bi-logo.gif) no-repeat right;
+
+
+
+	float: right;
+
+
+
+	line-height: 50px;
+
+
+
+	width: 170px;
+
+
+
+position:relative;
+
+
+
+}
+
+
+
+.braun {
+
+
+
+	width: 116px;
+
+
+
+	height: 29px;
+
+
+
+	display: inline-block;
+
+
+
+	text-indent: -9000px;
+
+
+
+	float: right;
+
+
+
+	margin: 10px 0 0;
+
+
+
+}
+
+
+
+.base29 {
+
+
+
+width:31px; height:10px; background:url(base29.gif) no-repeat; display:block; font-size:0; text-indent:-9000px; float: right; position:absolute; right:0; top:12px;
+
+
+
+}
+
+
+
+/* Footer CSS End */
+
+
+
+
+
+
+
+
+
+
+
+/* Captions */
+
+
+
+.aligncenter, div.aligncenter {
+
+
+
+	display: block;
+
+
+
+	margin-left: auto;
+
+
+
+	margin-right: auto;
+
+
+
+}
+
+
+
+.wp-caption {
+
+
+
+	border: 1px solid #ddd;
+
+
+
+	text-align: center;
+
+
+
+	background-color: #f3f3f3;
+
+
+
+	padding-top: 4px;
+
+
+
+	margin: 10px;
+
+
+
+	-moz-border-radius: 3px;
+
+
+
+	-khtml-border-radius: 3px;
+
+
+
+	-webkit-border-radius: 3px;
+
+
+
+	border-radius: 3px;
+
+
+
+}
+
+
+
+.wp-caption img {
+
+
+
+	margin: 0;
+
+
+
+	padding: 0;
+
+
+
+	border: 0 none;
+
+
+
+}
+
+
+
+.wp-caption p.wp-caption-text {
+
+
+
+	font-size: 11px;
+
+
+
+	line-height: 17px;
+
+
+
+	padding: 0 4px 5px;
+
+
+
+	margin: 0;
+
+
+
+}
+
+
+
+/* End captions */
+
+
+
+
+
+
+
+
+
+
+
+/* Inner Page - Form Elements */
+
+
+
+#col-2 .formelements {
+
+
+
+	font-size:12px;
+
+
+
+	margin-bottom:50px;
+
+
+
+}
+
+
+
+#col-2 .formelements .box {
+
+
+
+	padding:0 15px 15px;
+
+
+
+	border:1px solid #dbdbdb;
+
+
+
+}
+
+
+
+#col-2 .formelements .legend {
+
+
+
+	display:block;
+
+
+
+	margin-bottom:30px;
+
+
+
+	text-align:center;
+
+
+
+	text-transform:uppercase;
+
+
+
+}
+
+
+
+#col-2 .formelements li {
+
+
+
+	margin-bottom:20px;
+
+
+
+}
+
+
+
+#col-2 .formelements label {
+
+
+
+	display:block;
+
+
+
+	font-size:11px;
+
+
+
+	margin-bottom:8px;
+
+
+
+	text-transform:uppercase;
+
+
+
+}
+
+
+
+#col-2 .formelements input.txt {
+
+
+
+	width:229px;
+
+
+
+	height:18px;
+
+
+
+	border:0;
+
+
+
+	background:url(bgr-input-inner.png) no-repeat;
+
+
+
+	padding: 5px;
+
+
+
+}
+
+
+
+#col-2 .formelements input.txt2 {
+
+
+
+	width:29px;
+
+
+
+	height:18px;
+
+
+
+	border:0;
+
+
+
+	background:url(bgr-input-inner.png) no-repeat;
+
+
+
+	padding: 5px;
+
+
+
+}
+
+
+
+#col-2 .formelements textarea {
+
+
+
+	width:489px;
+
+
+
+	height:181px;
+
+
+
+	font:12px Arial, Helvetica, sans-serif;
+
+
+
+	border:0;
+
+
+
+	background:url(bgr-textarea-inner.png) no-repeat;
+
+
+
+	padding: 5px;
+
+
+
+}
+
+
+#col-2 .formelements input.btn-submit {
+	width:73px;
+	height:25px;
+	border:0;
+	cursor:pointer;
+	background:url(button-submit.png) no-repeat;
+
+}
+
+
+#subpages {
+
+
+
+	list-style: none;
+
+
+
+}
+
+#col-2 table td{padding:0 0 20px;}
+
+
+.flexcroll {
+	height: 500px;
+	margin: 0 0 10px;
+	padding: 20px 20px 20px 0;
+border-top: #664d45 1px solid;
+border-bottom: #664d45 1px solid;
+}
+.scrollgeneric {line-height: 1px;font-size: 1px;position: absolute;top: 0; left: 0;}
+.vscrollerbar {width: 27px;background:url(scrollbar.png) -45px 0px repeat-y; }
+.vscrollerbarbeg {height: 24px !important;width: 27px;background: url(scrollbar.png) -117px -32px no-repeat;}
+.vscrollerbarend {height: 27px;width: 36px;background: url(scrollbar.png) -117px 0px no-repeat;}
+.vscrollerbase {width: 27px;background:url(scrollbar.png) 0px 0px repeat-y;}
+.vscrollerbasebeg {width: 27px;height: 17px !important;background: url(scrollbar.png) -80px -40px no-repeat; cursor: pointer;}
+.vscrollerbaseend {height: 17px;width: 27px;background: url(scrollbar.png)  -80px 0px no-repeat; cursor: pointer;}
+.hscrollerbase {height: 16px; background-color: white;}
+.hscrollerbar {height: 16px; background-color: black;}
+.vscrollerbar, .hscrollerbar {padding: 17px;z-index: 2; }
+.scrollerjogbox {width: 27px;height: 16px;top: auto; left: auto;bottom: 0px; right: 0px;}
+
+/* Scroll Bar Master Styling Ends Here */

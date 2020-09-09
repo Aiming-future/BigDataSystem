@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>软件工程专业相关工作数据统计系统</title>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/series-label.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/oldie.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="dark-unica.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <style>
+        #menu {
+            float: left;
+            width: 200px;
+            height: 100%;
+
+        }
+        #container {
+            text-align: center;
+            margin: 0 auto;
+
+        }
+        body{
+            background-image: url("../static/bg3.jpg");
+
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+        .threed{
+
+            color: #fafafa;
+            letter-spacing: 0;
+            text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135 }
+
+    </style>
+</head>
+<h1 class="threed" align="left">软件工程相关行业数据统计系统</h1>
+<body>
+<div id="menu">
+    <ul>
+        <li class="page_item page-item-5"><a href="pie.html" title="学历要求">学历要求</a></li>
+        <li class="page_item page-item-7"><a href="pie1.html" title="地区分布">地区分布</a></li>
+        <li class="page_item page-item-9"><a href="pie2.html" title="行业分布">行业分布</a></li>
+        <li class="page_item page-item-11"><a href="bar.html" title="岗位数量Top10地区">岗位数量Top10地区</a></li>
+        <li class="page_item page-item-67"><a href="bar3.html" title="平均工资Top10地区">平均工资Top10地区</a></li>
+        <li class="page_item page-item-13"><a href="bar1.html" title="岗位招聘Top10职业">岗位招聘Top10职业</a></li>
+        <li class="page_item page-item-13"><a href="bar2.html" title="平均工资Top10职业">平均工资Top10职业</a></li>
+        <li class="page_item page-item-13"><a href="bar4.html" title="最新招聘数据">最新招聘数据</a></li>
+    </ul>
+</div>
+    <div id="container" style="max-width:800px;height:400px"></div>
+    <script>
+        new Vue({
+            el: '#container',
+            data() {
+                return {
+                    data: null
+                }
+            },
+            mounted() {
+                const instance = axios({
+                    post: 'get',
+                    url: 'http:///39.98.86.246:8081/visual/Bar'
+                })
+                instance.then(function (response) {
+                    console.log(response.data.data)
+                    let data = response.data.data
+                    Highcharts.chart('container', {
+                        chart: {
+                            type: 'bar',
+                            inverted: true
+
+                        },
+                        title: {
+                            text: '岗位数量Top10地区'
+                        },
+                        subtitle: {
+                            text: '数据来源: liepin.com'
+                        },
+                        xAxis: {
+                            categories: [""],
+                            title: {
+                                text: "地区"
+                            }
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: '岗位数量',
+                                align: 'high'
+                            },
+                            labels: {
+                                overflow: 'justify'
+                            }
+                        },
+                        tooltip: {
+                            valueSuffix: ' 个'
+                        },
+                        plotOptions: {
+                            bar: {
+                                dataLabels: {
+                                    enabled: true,
+                                    allowOverlap: true // 允许数据标签重叠
+                                }
+                            }
+                        },
+                        legend: {
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'top',
+                            x: -40,
+                            y: 100,
+                            floating: true,
+                            borderWidth: 1,
+                            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                            shadow: true,
+
+                        },
+
+
+                        series: data
+                    });
+
+
+                })
+            }
+        })
+
+    </script>
+</body>
+</html>
